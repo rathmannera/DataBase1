@@ -27,5 +27,18 @@ namespace DataBase1
         {
             this.Close();
         }
+
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+            searchPage mySearchPage = new searchPage();
+            mySearchPage.ShowDialog();
+        }
+
+        private void createButton_Click(object sender, EventArgs e)
+        {
+            createPage myCreatePage = new createPage();
+            myCreatePage.ShowDialog();
+        }
+
     }
 }

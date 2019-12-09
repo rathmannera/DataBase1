@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(homePageForm));
             this.welcomeLabel = new System.Windows.Forms.Label();
             this.searchButton = new System.Windows.Forms.Button();
             this.browseButton = new System.Windows.Forms.Button();
@@ -41,35 +42,38 @@
             // welcomeLabel
             // 
             this.welcomeLabel.AutoSize = true;
-            this.welcomeLabel.Font = new System.Drawing.Font("Pacifico", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.welcomeLabel.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.welcomeLabel.ForeColor = System.Drawing.Color.White;
-            this.welcomeLabel.Location = new System.Drawing.Point(47, 22);
+            this.welcomeLabel.Location = new System.Drawing.Point(123, 43);
+            this.welcomeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.welcomeLabel.Name = "welcomeLabel";
-            this.welcomeLabel.Size = new System.Drawing.Size(875, 85);
+            this.welcomeLabel.Size = new System.Drawing.Size(891, 54);
             this.welcomeLabel.TabIndex = 0;
             this.welcomeLabel.Text = "Welcome to the S.A.N.E  Music Brower!";
             // 
             // searchButton
             // 
             this.searchButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(190)))));
-            this.searchButton.Font = new System.Drawing.Font("Quicksand Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchButton.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchButton.ForeColor = System.Drawing.Color.White;
-            this.searchButton.Location = new System.Drawing.Point(358, 166);
+            this.searchButton.Location = new System.Drawing.Point(431, 159);
             this.searchButton.Margin = new System.Windows.Forms.Padding(0);
             this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(252, 75);
+            this.searchButton.Size = new System.Drawing.Size(233, 72);
             this.searchButton.TabIndex = 1;
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = false;
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
             // browseButton
             // 
             this.browseButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(190)))));
-            this.browseButton.Font = new System.Drawing.Font("Quicksand Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.browseButton.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.browseButton.ForeColor = System.Drawing.Color.White;
-            this.browseButton.Location = new System.Drawing.Point(358, 257);
+            this.browseButton.Location = new System.Drawing.Point(431, 246);
+            this.browseButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.browseButton.Name = "browseButton";
-            this.browseButton.Size = new System.Drawing.Size(252, 75);
+            this.browseButton.Size = new System.Drawing.Size(233, 72);
             this.browseButton.TabIndex = 2;
             this.browseButton.Text = "Browse";
             this.browseButton.UseVisualStyleBackColor = false;
@@ -78,34 +82,38 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Quicksand Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Rockwell", 10F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(275, 104);
+            this.label1.Location = new System.Drawing.Point(344, 107);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(418, 31);
+            this.label1.Size = new System.Drawing.Size(384, 31);
             this.label1.TabIndex = 3;
             this.label1.Text = "Please select an option below.";
             // 
             // createButton
             // 
             this.createButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(190)))));
-            this.createButton.Font = new System.Drawing.Font("Quicksand Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.createButton.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createButton.ForeColor = System.Drawing.Color.White;
-            this.createButton.Location = new System.Drawing.Point(358, 349);
+            this.createButton.Location = new System.Drawing.Point(431, 334);
+            this.createButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.createButton.Name = "createButton";
-            this.createButton.Size = new System.Drawing.Size(252, 75);
+            this.createButton.Size = new System.Drawing.Size(233, 72);
             this.createButton.TabIndex = 4;
             this.createButton.Text = "Create";
             this.createButton.UseVisualStyleBackColor = false;
+            this.createButton.Click += new System.EventHandler(this.createButton_Click);
             // 
             // deleteButton
             // 
             this.deleteButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(190)))));
-            this.deleteButton.Font = new System.Drawing.Font("Quicksand Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteButton.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteButton.ForeColor = System.Drawing.Color.White;
-            this.deleteButton.Location = new System.Drawing.Point(358, 445);
+            this.deleteButton.Location = new System.Drawing.Point(431, 426);
+            this.deleteButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(252, 75);
+            this.deleteButton.Size = new System.Drawing.Size(233, 72);
             this.deleteButton.TabIndex = 5;
             this.deleteButton.Text = "Delete";
             this.deleteButton.UseVisualStyleBackColor = false;
@@ -113,11 +121,12 @@
             // exitButton
             // 
             this.exitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(191)))), ((int)(((byte)(145)))));
-            this.exitButton.Font = new System.Drawing.Font("Quicksand Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitButton.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitButton.ForeColor = System.Drawing.Color.White;
-            this.exitButton.Location = new System.Drawing.Point(33, 514);
+            this.exitButton.Location = new System.Drawing.Point(171, 479);
+            this.exitButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(181, 75);
+            this.exitButton.Size = new System.Drawing.Size(167, 72);
             this.exitButton.TabIndex = 6;
             this.exitButton.Text = "Exit";
             this.exitButton.UseVisualStyleBackColor = false;
@@ -126,21 +135,23 @@
             // moreInfoButton
             // 
             this.moreInfoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(191)))), ((int)(((byte)(145)))));
-            this.moreInfoButton.Font = new System.Drawing.Font("Quicksand Bold", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.moreInfoButton.Font = new System.Drawing.Font("Rockwell", 7.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.moreInfoButton.ForeColor = System.Drawing.Color.White;
-            this.moreInfoButton.Location = new System.Drawing.Point(741, 514);
+            this.moreInfoButton.Location = new System.Drawing.Point(766, 491);
+            this.moreInfoButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.moreInfoButton.Name = "moreInfoButton";
-            this.moreInfoButton.Size = new System.Drawing.Size(181, 75);
+            this.moreInfoButton.Size = new System.Drawing.Size(167, 72);
             this.moreInfoButton.TabIndex = 7;
             this.moreInfoButton.Text = "More Info on S.A.N.E Music";
             this.moreInfoButton.UseVisualStyleBackColor = false;
             // 
             // homePageForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(192F, 192F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(216)))), ((int)(((byte)(235)))));
-            this.ClientSize = new System.Drawing.Size(965, 601);
+            this.ClientSize = new System.Drawing.Size(1073, 576);
             this.Controls.Add(this.moreInfoButton);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.deleteButton);
@@ -149,7 +160,9 @@
             this.Controls.Add(this.browseButton);
             this.Controls.Add(this.searchButton);
             this.Controls.Add(this.welcomeLabel);
-            this.Font = new System.Drawing.Font("Quicksand Bold", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Rockwell", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "homePageForm";
             this.Text = "Home Page";
             this.ResumeLayout(false);
