@@ -40,6 +40,7 @@
             this.songBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.songTableAdapter = new DataBase1.dbDataSetTableAdapters.SongTableAdapter();
             this.browseDataGridView = new System.Windows.Forms.DataGridView();
+            this.browseByConcertButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.songBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.browseDataGridView)).BeginInit();
@@ -104,16 +105,16 @@
             this.selectLabel.ForeColor = System.Drawing.Color.White;
             this.selectLabel.Location = new System.Drawing.Point(265, 28);
             this.selectLabel.Name = "selectLabel";
-            this.selectLabel.Size = new System.Drawing.Size(676, 54);
+            this.selectLabel.Size = new System.Drawing.Size(690, 54);
             this.selectLabel.TabIndex = 8;
-            this.selectLabel.Text = "Select a browse option below";
+            this.selectLabel.Text = "Select a browse option below:";
             // 
             // exitButton
             // 
             this.exitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(191)))), ((int)(((byte)(145)))));
             this.exitButton.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitButton.ForeColor = System.Drawing.Color.White;
-            this.exitButton.Location = new System.Drawing.Point(1009, 28);
+            this.exitButton.Location = new System.Drawing.Point(1287, 28);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(104, 51);
             this.exitButton.TabIndex = 4;
@@ -142,8 +143,21 @@
             this.browseDataGridView.Name = "browseDataGridView";
             this.browseDataGridView.RowHeadersWidth = 82;
             this.browseDataGridView.RowTemplate.Height = 33;
-            this.browseDataGridView.Size = new System.Drawing.Size(1028, 519);
+            this.browseDataGridView.Size = new System.Drawing.Size(1306, 519);
             this.browseDataGridView.TabIndex = 10;
+            // 
+            // browseByConcertButton
+            // 
+            this.browseByConcertButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(190)))));
+            this.browseByConcertButton.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.browseByConcertButton.ForeColor = System.Drawing.Color.White;
+            this.browseByConcertButton.Location = new System.Drawing.Point(1165, 125);
+            this.browseByConcertButton.Name = "browseByConcertButton";
+            this.browseByConcertButton.Size = new System.Drawing.Size(226, 76);
+            this.browseByConcertButton.TabIndex = 11;
+            this.browseByConcertButton.Text = "By Concert";
+            this.browseByConcertButton.UseVisualStyleBackColor = false;
+            this.browseByConcertButton.Click += new System.EventHandler(this.browseByConcertButton_Click);
             // 
             // browsePage
             // 
@@ -151,7 +165,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(216)))), ((int)(((byte)(235)))));
-            this.ClientSize = new System.Drawing.Size(1259, 774);
+            this.ClientSize = new System.Drawing.Size(1546, 774);
+            this.Controls.Add(this.browseByConcertButton);
             this.Controls.Add(this.browseDataGridView);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.selectLabel);
@@ -184,5 +199,6 @@
         private System.Windows.Forms.BindingSource songBindingSource;
         private dbDataSetTableAdapters.SongTableAdapter songTableAdapter;
         private System.Windows.Forms.DataGridView browseDataGridView;
+        private System.Windows.Forms.Button browseByConcertButton;
     }
 }

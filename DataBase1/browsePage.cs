@@ -109,9 +109,6 @@ namespace DataBase1
                                             "GROUP BY(playlist_name) " +
                                             "ORDER BY playlist_name";
 
-            //SELECT playlist_name AS 'Playlist Name', SEC_TO_TIME(SUM(TIME_TO_SEC(S. length))) AS 'Playlist Duration'
-            //FROM Song S JOIN Song_playlist SP ON SP.song_id = S.song_id JOIN Playlist P ON P.playlist_id = SP.playlist_id GROUP BY(playlist_name);
-
             string mainConn = ConfigurationManager.ConnectionStrings["DataBase1.Properties.Settings.dbConnectionString"].ConnectionString;
             MySqlConnection sqlConn = new MySqlConnection(mainConn);
 
@@ -129,6 +126,59 @@ namespace DataBase1
         private void exitButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void browseByConcertButton_Click(object sender, EventArgs e)
+        {
+            //SELECT artist_name AS `Artist Name`, song_name AS `Song Name`, venue AS `Venue`, city AS `City`, state AS `State`, country AS `Country`, year AS `Year`
+            //FROM Concert C
+            //JOIN Artist_concert ARC ON C.concert_id = ARC.concert_id
+            //JOIN Artist AR ON AR.artist_id = ARC.artist_id
+            //JOIN Song_concert SC ON SC.concert_id = C.concert_id
+            //JOIN Song S ON SC.song_id = S.song_id
+
+            //browseDataGridView.DataSource = null;
+
+            //string selectPlaylistQuery = "SELECT playlist_name AS 'Playlist Name', SEC_TO_TIME(SUM(TIME_TO_SEC(S.length))) AS 'Playlist Duration' " +
+            //                                "FROM Song S " +
+            //                                "JOIN Song_playlist SP ON SP.song_id = S.song_id " +
+            //                                "JOIN Playlist P ON P.playlist_id = SP.playlist_id " +
+            //                                "GROUP BY(playlist_name) " +
+            //                                "ORDER BY playlist_name";
+
+            //string mainConn = ConfigurationManager.ConnectionStrings["DataBase1.Properties.Settings.dbConnectionString"].ConnectionString;
+            //MySqlConnection sqlConn = new MySqlConnection(mainConn);
+
+            //sqlConn.Open();
+
+            //MySqlCommand sqlPlaylistCommand = new MySqlCommand(selectPlaylistQuery, sqlConn);
+            //MySqlDataAdapter sqlPlaylistAdapter = new MySqlDataAdapter(sqlPlaylistCommand);
+            //DataTable playlistDataTable = new DataTable();
+            //sqlPlaylistAdapter.Fill(playlistDataTable);
+            //browseDataGridView.DataSource = playlistDataTable;
+
+            //sqlConn.Close();
+
+            browseDataGridView.DataSource = null;
+
+            string selectConcertQuery = "SELECT artist_name AS `Artist Name`, song_name AS `Song Name`, venue AS `Venue`, city AS `City`, state AS `State`, country AS `Country`, year AS `Year` " +
+                "FROM Concert C " +
+                "JOIN Artist_concert ARC ON C.concert_id = ARC.concert_id " +
+                "JOIN Artist AR ON AR.artist_id = ARC.artist_id " +
+                "JOIN Song_concert SC ON SC.concert_id = C.concert_id " +
+                "JOIN Song S ON SC.song_id = S.song_id";
+
+            string mainConn = ConfigurationManager.ConnectionStrings["DataBase1.Properties.Settings.dbConnectionString"].ConnectionString;
+            MySqlConnection sqlConn = new MySqlConnection(mainConn);
+
+            sqlConn.Open();
+
+            MySqlCommand sqlConcertCommand = new MySqlCommand(selectConcertQuery, sqlConn);
+            MySqlDataAdapter sqlConcertAdapter = new MySqlDataAdapter(sqlConcertCommand);
+            DataTable concertDataTable = new DataTable();
+            sqlConcertAdapter.Fill(concertDataTable);
+            browseDataGridView.DataSource = concertDataTable;
+
         }
     }
 }

@@ -121,6 +121,7 @@
             this.searchGridView.RowTemplate.Height = 33;
             this.searchGridView.Size = new System.Drawing.Size(715, 780);
             this.searchGridView.TabIndex = 3;
+            this.searchGridView.Visible = false;
             // 
             // albumSearchGroupBox
             // 

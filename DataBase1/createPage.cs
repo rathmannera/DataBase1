@@ -219,6 +219,7 @@ namespace DataBase1
         {
             string userArtistID = artistIDTextBox.Text;
             string userCity = cityTextBox.Text;
+            string userState = stateTextBox.Text;
             string userVenue = venueTextBox.Text;
             string userCountry = countryTextBox.Text;
             string userYear = yearTextBox.Text;
@@ -233,8 +234,8 @@ namespace DataBase1
             string userSong9 = songID9TextBox.Text;
             string userSong10 = songID10TextBox.Text;
 
-            string sqlInsertConcertQuery = "INSERT INTO blairs2_db.Concert (city, venue, country, year) " +
-                "VALUES (@city, @venue, @country, @year)";
+            string sqlInsertConcertQuery = "INSERT INTO blairs2_db.Concert (city, venue, country, year, state) " +
+                "VALUES (@city, @venue, @country, @year, @state)";
 
             string sqlInsertArtistConQuery = "INSERT INTO blairs2_db.Artist_concert (artist_id, concert_id) " +
                 "VALUES (@artistID, " +
@@ -293,6 +294,7 @@ namespace DataBase1
             sqlInsertConcertCommand.Parameters.Add("@venue", MySqlDbType.VarChar).Value = userVenue;
             sqlInsertConcertCommand.Parameters.Add("@country", MySqlDbType.VarChar).Value = userCountry;
             sqlInsertConcertCommand.Parameters.Add("@year", MySqlDbType.VarChar).Value = userYear;
+            sqlInsertConcertCommand.Parameters.Add("@state", MySqlDbType.VarChar).Value = userState;
 
             sqlInsertArtistConCommand.Parameters.Add("@artistID", MySqlDbType.VarChar).Value = userArtistID;
             sqlInsertArtistConCommand.Parameters.Add("@city", MySqlDbType.VarChar).Value = userCity;

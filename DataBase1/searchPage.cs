@@ -28,8 +28,9 @@ namespace DataBase1
 
         private void songSearchButton_Click(object sender, EventArgs e)
         {
+            searchGridView.Visible = true;
             string userSongSearch = songSearchTextBox.Text;
-            string sqlSongSearchQuery = "SELECT song_name AS `Song Name`, artist_name AS `Artist`, album_name AS `Album` " +
+            string sqlSongSearchQuery = "SELECT song_name AS `Song Name`, artist_name AS `Artist`, album_name AS `Album`, lyrics AS `Lyrics` " +
                                         "FROM Song S " +
                                         "JOIN Artist AR ON AR.artist_id = S.artist_id " +
                                         "JOIN Song_album SAL ON S.song_id = SAL.song_id " +
@@ -49,8 +50,9 @@ namespace DataBase1
 
         private void albumSearchButton_Click_1(object sender, EventArgs e)
         {
+            searchGridView.Visible = true;
             string userAlbumSearch = albumSearchTextBox.Text;
-            string sqlAlbumSearchQuery = "SELECT album_name AS `Album`, artist_name AS `Artist`, song_name AS `Song` " +
+            string sqlAlbumSearchQuery = "SELECT album_name AS `Album`, artist_name AS `Artist`, song_name AS `Song`, live_recording AS `Recorded Live` " +
                                             "FROM Album AL " +
                                             "JOIN Artist_album ARAL ON AL.album_id = ARAL.album_id " +
                                             "JOIN Artist AR ON AR.artist_id = ARAL.artist_id " +
@@ -73,8 +75,9 @@ namespace DataBase1
 
         private void artistSearchButton_Click(object sender, EventArgs e)
         {
+            searchGridView.Visible = true;
             string userArtistSearch = artistSearchTextBox.Text;
-            string sqlArtistSearchQuery = "SELECT artist_name AS `Artist`, album_name AS `Album`, label_name AS `Label` " +
+            string sqlArtistSearchQuery = "SELECT artist_name AS `Artist`, album_name AS `Album`, label_name AS `Label`, live_recording AS `Recorded Live` " +
                                             "FROM Artist AR " +
                                             "JOIN Artist_album ARAL ON AR.artist_id = ARAL.artist_id " +
                                             "JOIN Album AL ON AL.album_id = ARAL.album_id " +
@@ -95,8 +98,9 @@ namespace DataBase1
 
         private void concertSearchButton_Click(object sender, EventArgs e)
         {
+            searchGridView.Visible = true;
             string userConcertSearch = concertSearchTextBox.Text;
-            string sqlConcertSearchQuery = "SELECT artist_name AS `Artist`, venue AS `Venue`, city AS `City`, song_name AS `Songs`, year AS `Year` " +
+            string sqlConcertSearchQuery = "SELECT artist_name AS `Artist`, venue AS `Venue`, city AS `City`, state AS `State`, country AS `Country`, song_name AS `Songs`, year AS `Year` " +
                                                         "FROM Concert C " +
                                                         "JOIN Artist_concert ARC ON C.concert_id = ARC.concert_id " +
                                                         "JOIN Artist AR ON ARC.artist_id = AR.artist_id " +
@@ -118,6 +122,7 @@ namespace DataBase1
 
         private void lyricSearchButton_Click(object sender, EventArgs e)
         {
+            searchGridView.Visible = true;
             string userLyricSearch = lyricSearchTextBox.Text;
             string sqlLyricSearchQuery = "SELECT song_name AS `Song`, album_name AS `Album`, artist_name AS `Artist`, lyrics AS `Lyrics`" +
                                                         "FROM Song S " +
@@ -140,6 +145,7 @@ namespace DataBase1
 
         private void playlistSearchButton_Click(object sender, EventArgs e)
         {
+            searchGridView.Visible = true;
             string userPlaylistSearch = playlistSearchTextBox.Text;
             string sqlPlaylistSearchQuery = "SELECT playlist_name AS 'Playlist Name', SEC_TO_TIME(SUM(TIME_TO_SEC(S.length))) AS 'Playlist Duration' " +
                                 "FROM Song S " +
@@ -162,6 +168,7 @@ namespace DataBase1
 
         private void labelSearchButton_Click(object sender, EventArgs e)
         {
+            searchGridView.Visible = true;
             string userLabelSearch = labelSearchTextBox.Text;
             string sqlLabelSearchQuery = "SELECT label_name AS `Label`, album_name AS `Album`, artist_name AS `Artist` " +
                                              "FROM Label L " +
@@ -183,6 +190,7 @@ namespace DataBase1
 
         private void genreSearchButton_Click(object sender, EventArgs e)
         {
+            searchGridView.Visible = true;
             string userGenreSearch = genreSearchTextBox.Text;
             string sqlGenreSearchQuery = "SELECT genre AS `Genre`, artist_name AS `Artist`, album_name AS `Album` " +
                                                         "FROM Genre G " +

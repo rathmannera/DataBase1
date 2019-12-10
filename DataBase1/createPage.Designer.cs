@@ -76,6 +76,7 @@
             this.songArtistDataGridView = new System.Windows.Forms.DataGridView();
             this.clearConcertButton = new System.Windows.Forms.Button();
             this.createConcertButton = new System.Windows.Forms.Button();
+            this.stateTextBox = new System.Windows.Forms.TextBox();
             this.addPlaylistGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.songAndIDDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.songBindingSource)).BeginInit();
@@ -362,6 +363,7 @@
             // addConcertGroupBox
             // 
             this.addConcertGroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(217)))), ((int)(((byte)(199)))));
+            this.addConcertGroupBox.Controls.Add(this.stateTextBox);
             this.addConcertGroupBox.Controls.Add(this.createConcertInstructionsLabel);
             this.addConcertGroupBox.Controls.Add(this.selectSongArtistIDLabel);
             this.addConcertGroupBox.Controls.Add(this.songID9TextBox);
@@ -393,12 +395,12 @@
             // 
             this.createConcertInstructionsLabel.AutoSize = true;
             this.createConcertInstructionsLabel.ForeColor = System.Drawing.Color.White;
-            this.createConcertInstructionsLabel.Location = new System.Drawing.Point(936, 37);
+            this.createConcertInstructionsLabel.Location = new System.Drawing.Point(889, 37);
             this.createConcertInstructionsLabel.Name = "createConcertInstructionsLabel";
-            this.createConcertInstructionsLabel.Size = new System.Drawing.Size(447, 69);
+            this.createConcertInstructionsLabel.Size = new System.Drawing.Size(534, 69);
             this.createConcertInstructionsLabel.TabIndex = 16;
-            this.createConcertInstructionsLabel.Text = "Enter Artist ID, Concert City, Concert Venue,\r\n Concert Country, Concert Year, as" +
-    " well as 10\r\n song IDs of songs performed at the concert:\r\n";
+            this.createConcertInstructionsLabel.Text = "Enter Artist ID, Concert City, Concert Venue,\r\n Concert State, Concert Country, C" +
+    "oncert Year, as well\r\n as 10 song IDs of songs performed at the concert:\r\n";
             this.createConcertInstructionsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // selectSongArtistIDLabel
@@ -415,7 +417,7 @@
             // songID9TextBox
             // 
             this.songID9TextBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.songID9TextBox.Location = new System.Drawing.Point(1158, 534);
+            this.songID9TextBox.Location = new System.Drawing.Point(1158, 524);
             this.songID9TextBox.Name = "songID9TextBox";
             this.songID9TextBox.Size = new System.Drawing.Size(265, 32);
             this.songID9TextBox.TabIndex = 13;
@@ -425,7 +427,7 @@
             // songID7TextBox
             // 
             this.songID7TextBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.songID7TextBox.Location = new System.Drawing.Point(1158, 433);
+            this.songID7TextBox.Location = new System.Drawing.Point(1158, 422);
             this.songID7TextBox.Name = "songID7TextBox";
             this.songID7TextBox.Size = new System.Drawing.Size(265, 32);
             this.songID7TextBox.TabIndex = 11;
@@ -435,7 +437,7 @@
             // songID10TextBox
             // 
             this.songID10TextBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.songID10TextBox.Location = new System.Drawing.Point(1158, 583);
+            this.songID10TextBox.Location = new System.Drawing.Point(1158, 575);
             this.songID10TextBox.Name = "songID10TextBox";
             this.songID10TextBox.Size = new System.Drawing.Size(265, 32);
             this.songID10TextBox.TabIndex = 14;
@@ -445,7 +447,7 @@
             // songID8TextBox
             // 
             this.songID8TextBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.songID8TextBox.Location = new System.Drawing.Point(1158, 484);
+            this.songID8TextBox.Location = new System.Drawing.Point(1158, 473);
             this.songID8TextBox.Name = "songID8TextBox";
             this.songID8TextBox.Size = new System.Drawing.Size(265, 32);
             this.songID8TextBox.TabIndex = 12;
@@ -455,7 +457,7 @@
             // songID5TextBox
             // 
             this.songID5TextBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.songID5TextBox.Location = new System.Drawing.Point(1158, 331);
+            this.songID5TextBox.Location = new System.Drawing.Point(1158, 320);
             this.songID5TextBox.Name = "songID5TextBox";
             this.songID5TextBox.Size = new System.Drawing.Size(265, 32);
             this.songID5TextBox.TabIndex = 9;
@@ -465,7 +467,7 @@
             // songID3TextBox
             // 
             this.songID3TextBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.songID3TextBox.Location = new System.Drawing.Point(1158, 222);
+            this.songID3TextBox.Location = new System.Drawing.Point(1158, 218);
             this.songID3TextBox.Name = "songID3TextBox";
             this.songID3TextBox.Size = new System.Drawing.Size(265, 32);
             this.songID3TextBox.TabIndex = 7;
@@ -475,7 +477,7 @@
             // songID4TextBox
             // 
             this.songID4TextBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.songID4TextBox.Location = new System.Drawing.Point(1158, 274);
+            this.songID4TextBox.Location = new System.Drawing.Point(1158, 269);
             this.songID4TextBox.Name = "songID4TextBox";
             this.songID4TextBox.Size = new System.Drawing.Size(265, 32);
             this.songID4TextBox.TabIndex = 8;
@@ -485,7 +487,7 @@
             // songID6TextBox
             // 
             this.songID6TextBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.songID6TextBox.Location = new System.Drawing.Point(1158, 383);
+            this.songID6TextBox.Location = new System.Drawing.Point(1158, 371);
             this.songID6TextBox.Name = "songID6TextBox";
             this.songID6TextBox.Size = new System.Drawing.Size(265, 32);
             this.songID6TextBox.TabIndex = 10;
@@ -495,7 +497,7 @@
             // songID2TextBox
             // 
             this.songID2TextBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.songID2TextBox.Location = new System.Drawing.Point(1158, 168);
+            this.songID2TextBox.Location = new System.Drawing.Point(1158, 167);
             this.songID2TextBox.Name = "songID2TextBox";
             this.songID2TextBox.Size = new System.Drawing.Size(265, 32);
             this.songID2TextBox.TabIndex = 6;
@@ -515,7 +517,7 @@
             // cityTextBox
             // 
             this.cityTextBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.cityTextBox.Location = new System.Drawing.Point(881, 232);
+            this.cityTextBox.Location = new System.Drawing.Point(881, 302);
             this.cityTextBox.Name = "cityTextBox";
             this.cityTextBox.Size = new System.Drawing.Size(265, 32);
             this.cityTextBox.TabIndex = 1;
@@ -525,7 +527,7 @@
             // venueTextBox
             // 
             this.venueTextBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.venueTextBox.Location = new System.Drawing.Point(881, 349);
+            this.venueTextBox.Location = new System.Drawing.Point(881, 209);
             this.venueTextBox.Name = "venueTextBox";
             this.venueTextBox.Size = new System.Drawing.Size(265, 32);
             this.venueTextBox.TabIndex = 2;
@@ -535,7 +537,7 @@
             // countryTextBox
             // 
             this.countryTextBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.countryTextBox.Location = new System.Drawing.Point(881, 466);
+            this.countryTextBox.Location = new System.Drawing.Point(881, 488);
             this.countryTextBox.Name = "countryTextBox";
             this.countryTextBox.Size = new System.Drawing.Size(265, 32);
             this.countryTextBox.TabIndex = 3;
@@ -545,7 +547,7 @@
             // yearTextBox
             // 
             this.yearTextBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.yearTextBox.Location = new System.Drawing.Point(881, 583);
+            this.yearTextBox.Location = new System.Drawing.Point(881, 581);
             this.yearTextBox.Name = "yearTextBox";
             this.yearTextBox.Size = new System.Drawing.Size(265, 32);
             this.yearTextBox.TabIndex = 4;
@@ -597,6 +599,16 @@
             this.createConcertButton.Text = "Create";
             this.createConcertButton.UseVisualStyleBackColor = false;
             this.createConcertButton.Click += new System.EventHandler(this.createConcertButton_Click);
+            // 
+            // stateTextBox
+            // 
+            this.stateTextBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.stateTextBox.Location = new System.Drawing.Point(881, 395);
+            this.stateTextBox.Name = "stateTextBox";
+            this.stateTextBox.Size = new System.Drawing.Size(265, 32);
+            this.stateTextBox.TabIndex = 18;
+            this.stateTextBox.Text = "State";
+            this.stateTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // createPage
             // 
@@ -678,5 +690,6 @@
         private System.Windows.Forms.TextBox artistIDTextBox;
         private System.Windows.Forms.Label selectSongArtistIDLabel;
         private System.Windows.Forms.Label createConcertInstructionsLabel;
+        private System.Windows.Forms.TextBox stateTextBox;
     }
 }
