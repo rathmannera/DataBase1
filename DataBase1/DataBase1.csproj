@@ -77,6 +77,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dbDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="deletePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deletePage.Designer.cs">
+      <DependentUpon>deletePage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,11 +97,20 @@
     <Compile Include="searchPage.Designer.cs">
       <DependentUpon>searchPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="updatePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updatePage.Designer.cs">
+      <DependentUpon>updatePage.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="browsePage.resx">
       <DependentUpon>browsePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="createPage.resx">
       <DependentUpon>createPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deletePage.resx">
+      <DependentUpon>deletePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -111,6 +126,9 @@
     </Compile>
     <EmbeddedResource Include="searchPage.resx">
       <DependentUpon>searchPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updatePage.resx">
+      <DependentUpon>updatePage.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="dbDataSet.xsc">
       <DependentUpon>dbDataSet.xsd</DependentUpon>

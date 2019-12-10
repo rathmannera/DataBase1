@@ -122,17 +122,33 @@ namespace DataBase1
             sqlInsertSongIntoPlayComm10.Parameters.Add("@songID10", MySqlDbType.VarChar).Value = song10ID;
             sqlInsertSongIntoPlayComm10.Parameters.Add("@playlistName", MySqlDbType.VarChar).Value = userPlaylistName;
 
-            sqlInsertPlaylistCommand.ExecuteNonQuery();
-            sqlInsertSongIntoPlayComm1.ExecuteNonQuery();
-            sqlInsertSongIntoPlayComm2.ExecuteNonQuery();
-            sqlInsertSongIntoPlayComm3.ExecuteNonQuery();
-            sqlInsertSongIntoPlayComm4.ExecuteNonQuery();
-            sqlInsertSongIntoPlayComm5.ExecuteNonQuery();
-            sqlInsertSongIntoPlayComm6.ExecuteNonQuery();
-            sqlInsertSongIntoPlayComm7.ExecuteNonQuery();
-            sqlInsertSongIntoPlayComm8.ExecuteNonQuery();
-            sqlInsertSongIntoPlayComm9.ExecuteNonQuery();
-            sqlInsertSongIntoPlayComm10.ExecuteNonQuery();
+            int playlistResult = sqlInsertPlaylistCommand.ExecuteNonQuery();
+            int song1Result = sqlInsertSongIntoPlayComm1.ExecuteNonQuery();
+            int song2Result = sqlInsertSongIntoPlayComm2.ExecuteNonQuery();
+            int song3Result = sqlInsertSongIntoPlayComm3.ExecuteNonQuery();
+            int song4Result = sqlInsertSongIntoPlayComm4.ExecuteNonQuery();
+            int song5Result = sqlInsertSongIntoPlayComm5.ExecuteNonQuery();
+            int song6Result = sqlInsertSongIntoPlayComm6.ExecuteNonQuery();
+            int song7Result = sqlInsertSongIntoPlayComm7.ExecuteNonQuery();
+            int song8Result = sqlInsertSongIntoPlayComm8.ExecuteNonQuery();
+            int song9Result = sqlInsertSongIntoPlayComm9.ExecuteNonQuery();
+            int song10Result = sqlInsertSongIntoPlayComm10.ExecuteNonQuery();
+
+            //Check error
+            if (playlistResult < 0 && song1Result < 0 && song2Result < 0 && song3Result < 0 
+                && song4Result < 0 && song5Result < 0 && song6Result < 0 && song7Result < 0
+                && song8Result < 0 && song9Result < 0 && song10Result < 0)
+            {
+                MessageBox.Show("Error inserting playlist into Database!");
+            }
+            //Check success
+            if (playlistResult > 0 && song1Result > 0 && song2Result > 0 && song3Result > 0
+                && song4Result > 0 && song5Result > 0 && song6Result > 0 && song7Result > 0
+                && song8Result > 0 && song9Result > 0 && song10Result > 0)
+            {
+                MessageBox.Show("Success inserting playlist into Database!");
+            }
+
 
             sqlConnection.Close();
         }
@@ -344,18 +360,33 @@ namespace DataBase1
             sqlInsertSongConCommand10.Parameters.Add("@country", MySqlDbType.VarChar).Value = userCountry;
             sqlInsertSongConCommand10.Parameters.Add("@year", MySqlDbType.VarChar).Value = userYear;
 
-            sqlInsertConcertCommand.ExecuteNonQuery();
-            sqlInsertArtistConCommand.ExecuteNonQuery();
-            sqlInsertSongConCommand1.ExecuteNonQuery();
-            sqlInsertSongConCommand2.ExecuteNonQuery();
-            sqlInsertSongConCommand3.ExecuteNonQuery();
-            sqlInsertSongConCommand4.ExecuteNonQuery();
-            sqlInsertSongConCommand5.ExecuteNonQuery();
-            sqlInsertSongConCommand6.ExecuteNonQuery();
-            sqlInsertSongConCommand7.ExecuteNonQuery();
-            sqlInsertSongConCommand8.ExecuteNonQuery();
-            sqlInsertSongConCommand9.ExecuteNonQuery();
-            sqlInsertSongConCommand10.ExecuteNonQuery();
+            int concertResult = sqlInsertConcertCommand.ExecuteNonQuery();
+            int artistConcertResult = sqlInsertArtistConCommand.ExecuteNonQuery();
+            int songResult1 = sqlInsertSongConCommand1.ExecuteNonQuery();
+            int songResult2 = sqlInsertSongConCommand2.ExecuteNonQuery();
+            int songResult3 = sqlInsertSongConCommand3.ExecuteNonQuery();
+            int songResult4 = sqlInsertSongConCommand4.ExecuteNonQuery();
+            int songResult5 = sqlInsertSongConCommand5.ExecuteNonQuery();
+            int songResult6 = sqlInsertSongConCommand6.ExecuteNonQuery();
+            int songResult7 = sqlInsertSongConCommand7.ExecuteNonQuery();
+            int songResult8 = sqlInsertSongConCommand8.ExecuteNonQuery();
+            int songResult9 = sqlInsertSongConCommand9.ExecuteNonQuery();
+            int songResult10 = sqlInsertSongConCommand10.ExecuteNonQuery();
+
+            //Check error
+            if (concertResult < 0 && artistConcertResult < 0 && songResult1 < 0 && songResult2 < 0
+                && songResult3 < 0 && songResult4 < 0 && songResult5 < 0 && songResult6 < 0
+                && songResult7 < 0 && songResult8 < 0 && songResult9 < 0 && songResult10 < 0)
+            {
+                MessageBox.Show("Error inserting concert into Database!");
+            }
+            //Check success
+            if (concertResult > 0 && artistConcertResult > 0 && songResult1 > 0 && songResult2 > 0
+                && songResult3 > 0 && songResult4 > 0 && songResult5 > 0 && songResult6 > 0
+                && songResult7 > 0 && songResult8 > 0 && songResult9 > 0 && songResult10 > 0)
+            {
+                MessageBox.Show("Success inserting concert into Database!");
+            }
 
             sqlConnection.Close();
         }

@@ -123,7 +123,6 @@ namespace DataBase1
                                                         "FROM Song S " +
                                                         "JOIN Artist A ON S.artist_id = A.artist_id " +
                                                         "JOIN Song_album SA ON S.song_id = SA.song_id " +
-
                                                         "JOIN Album AL ON SA.album_id = AL.album_id " +
                                                         "WHERE lyrics LIKE '%" + @userLyricSearch + "%'";
 

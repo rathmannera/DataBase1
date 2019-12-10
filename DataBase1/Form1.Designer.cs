@@ -37,6 +37,7 @@
             this.deleteButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
             this.moreInfoButton = new System.Windows.Forms.Button();
+            this.updateButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // welcomeLabel
@@ -110,20 +111,21 @@
             this.deleteButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(190)))));
             this.deleteButton.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteButton.ForeColor = System.Drawing.Color.White;
-            this.deleteButton.Location = new System.Drawing.Point(431, 426);
+            this.deleteButton.Location = new System.Drawing.Point(431, 508);
             this.deleteButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(233, 72);
             this.deleteButton.TabIndex = 5;
             this.deleteButton.Text = "Delete";
             this.deleteButton.UseVisualStyleBackColor = false;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // exitButton
             // 
             this.exitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(191)))), ((int)(((byte)(145)))));
             this.exitButton.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitButton.ForeColor = System.Drawing.Color.White;
-            this.exitButton.Location = new System.Drawing.Point(171, 479);
+            this.exitButton.Location = new System.Drawing.Point(171, 569);
             this.exitButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(167, 72);
@@ -137,7 +139,7 @@
             this.moreInfoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(191)))), ((int)(((byte)(145)))));
             this.moreInfoButton.Font = new System.Drawing.Font("Rockwell", 7.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.moreInfoButton.ForeColor = System.Drawing.Color.White;
-            this.moreInfoButton.Location = new System.Drawing.Point(766, 491);
+            this.moreInfoButton.Location = new System.Drawing.Point(770, 571);
             this.moreInfoButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.moreInfoButton.Name = "moreInfoButton";
             this.moreInfoButton.Size = new System.Drawing.Size(167, 72);
@@ -145,13 +147,28 @@
             this.moreInfoButton.Text = "More Info on S.A.N.E Music";
             this.moreInfoButton.UseVisualStyleBackColor = false;
             // 
+            // updateButton
+            // 
+            this.updateButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(190)))));
+            this.updateButton.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateButton.ForeColor = System.Drawing.Color.White;
+            this.updateButton.Location = new System.Drawing.Point(430, 420);
+            this.updateButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.updateButton.Name = "updateButton";
+            this.updateButton.Size = new System.Drawing.Size(233, 72);
+            this.updateButton.TabIndex = 8;
+            this.updateButton.Text = "Update";
+            this.updateButton.UseVisualStyleBackColor = false;
+            this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
+            // 
             // homePageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(192F, 192F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(216)))), ((int)(((byte)(235)))));
-            this.ClientSize = new System.Drawing.Size(1073, 576);
+            this.ClientSize = new System.Drawing.Size(1073, 661);
+            this.Controls.Add(this.updateButton);
             this.Controls.Add(this.moreInfoButton);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.deleteButton);
@@ -180,6 +197,7 @@
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.Button moreInfoButton;
+        private System.Windows.Forms.Button updateButton;
     }
 }
 

@@ -40,5 +40,16 @@ namespace DataBase1
             myCreatePage.ShowDialog();
         }
 
+        private void updateButton_Click(object sender, EventArgs e)
+        {
+            updatePage myUpdatePage = new updatePage();
+            myUpdatePage.ShowDialog();
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            deletePage myDeletePage = new deletePage();
+            myDeletePage.ShowDialog();
+        }
     }
 }

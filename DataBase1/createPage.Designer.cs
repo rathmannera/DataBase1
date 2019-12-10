@@ -382,7 +382,7 @@
             this.addConcertGroupBox.Controls.Add(this.songArtistDataGridView);
             this.addConcertGroupBox.Controls.Add(this.clearConcertButton);
             this.addConcertGroupBox.Controls.Add(this.createConcertButton);
-            this.addConcertGroupBox.Location = new System.Drawing.Point(40, 222);
+            this.addConcertGroupBox.Location = new System.Drawing.Point(85, 222);
             this.addConcertGroupBox.Name = "addConcertGroupBox";
             this.addConcertGroupBox.Size = new System.Drawing.Size(1478, 814);
             this.addConcertGroupBox.TabIndex = 3;
