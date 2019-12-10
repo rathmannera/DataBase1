@@ -6,4 +6,5 @@ Usage instructions:
     -Ensure all developer packs are up to date
     -Ensure .resx files are allowed permission for use
     -Install node MySQL if necessary
-2. Enjoy perusing the music database
+2. Run the program in Visual Studio by pressing "Start" in the tool bar
+3. Enjoy perusing the music database
