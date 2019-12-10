@@ -36,7 +36,6 @@
             this.createButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
-            this.moreInfoButton = new System.Windows.Forms.Button();
             this.updateButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -134,19 +133,6 @@
             this.exitButton.UseVisualStyleBackColor = false;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
-            // moreInfoButton
-            // 
-            this.moreInfoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(191)))), ((int)(((byte)(145)))));
-            this.moreInfoButton.Font = new System.Drawing.Font("Rockwell", 7.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.moreInfoButton.ForeColor = System.Drawing.Color.White;
-            this.moreInfoButton.Location = new System.Drawing.Point(770, 571);
-            this.moreInfoButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.moreInfoButton.Name = "moreInfoButton";
-            this.moreInfoButton.Size = new System.Drawing.Size(167, 72);
-            this.moreInfoButton.TabIndex = 7;
-            this.moreInfoButton.Text = "More Info on S.A.N.E Music";
-            this.moreInfoButton.UseVisualStyleBackColor = false;
-            // 
             // updateButton
             // 
             this.updateButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(190)))));
@@ -169,7 +155,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(216)))), ((int)(((byte)(235)))));
             this.ClientSize = new System.Drawing.Size(1073, 661);
             this.Controls.Add(this.updateButton);
-            this.Controls.Add(this.moreInfoButton);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.createButton);
@@ -196,7 +181,6 @@
         private System.Windows.Forms.Button createButton;
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.Button exitButton;
-        private System.Windows.Forms.Button moreInfoButton;
         private System.Windows.Forms.Button updateButton;
     }
 }
